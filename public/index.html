@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+  <script src="/socket.io/socket.io.js"></script>
+  <meta charset="utf-8">
+  <title>WebArm</title>
+</head>
+
+<body>
+  
+  <script src="js/master.js"></script>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>WebArm</h1>
+      </div>
+    </div>
+    <div class="nav">
+      <ul>
+        <li onclick="infoFunction()">Info</li>
+        <li onclick="teamFunction()">Equipo</li>
+        <li onclick="controlFunction()">Control</li>
+        <li onclick="aboutFunction()">About</li>
+      </ul>
+    </div>
+    <div class="containerinfo box">
+      <h2 id="title">Info</h2>
+      <p id="text">Prototipo de brazo robotico controlado por arduino, leapmotion y aplicaciones web alojadas en Microsoft Azure.</p>
+      <button id="btnOn"> Led On </button>
+      <button id="btnOff"> Led Off </button>
+      <script src='js/client.js'></script>
+    </div>
+  </div>
+</body>
+
+</html>

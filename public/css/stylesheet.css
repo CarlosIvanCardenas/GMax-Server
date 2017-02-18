@@ -1,0 +1,76 @@
+body {
+    background: rgb(5, 102, 141);
+}
+
+.container-fluid {
+    padding: 0px;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    font-family: "Fjalla One", sans-serif;
+    font-size: 4em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px;
+    margin: 30px;
+}
+
+.nav ul {
+    list-style-type: none;
+    justify-content: center;
+    background-color: rgb(250, 204, 46);
+    margin-bottom: 40px;
+    overflow: hidden;
+    display: flex;
+}
+
+.nav li {
+    float: left;
+    color: black;
+    text-align: center;
+    font-family: "Fjalla One", sans-serif;
+    font-size: 2em;
+    text-decoration: none;
+    padding: 18px 2em;
+}
+
+.nav li:hover {
+    background-color: #FFBF00;
+}
+
+.containerinfo {
+    width: 80%;
+    height: 500px;
+    box-shadow: rgba(0, 0, 0, 0.34902) 0px 27px 55px 0px;
+    overflow: hidden;
+    background: rgb(255, 255, 255);
+    margin: auto;
+    border-radius: 20px;
+    padding: 40px;
+}
+
+.containerinfo h2 {
+    font-family: "Fjalla One", sans-serif;
+    font-size: 2em;
+    color: grey;
+}
+
+.containerinfo p {
+    font-family: "Fjalla One", sans-serif;
+    font-size: 2em;
+    color: rgb(60, 105, 151);
+    margin: 0px;
+}
+
+@media(max-width: 700px) {
+    .nav li{
+        font-size: 1.5em
+    }
+}
+
+@media(max-width: 500px) {
+    .nav li{
+        font-size: 1em
+    }
+}
