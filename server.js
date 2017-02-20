@@ -11,30 +11,36 @@ server.listen(port, function () {
 
 app.use(express.static(__dirname + '/public'));
 
-let clients = {};
-clients.arduino = null;
-clients.control = new Emitter();
+let arduino = new Emitter();
+let control = new Emitter();
 
 io.on('connection', function(client){
   client.on('ready', function (id) {
     if (id == 'arduino') {
       console.log("arduino connected");
-      clients.arduino = client;
-      //clients.arduino.join('room');
+      arduino = client;
 
     } else if (id = 'control') {
       console.log("control connected");
       control = client;
-      //clients.control.join('room');
     }
   });
 
-   clients.control.on('prender', function () {
-    clients.arduino.emit('prender');
+   control.on('prender', function () {
+    arduino.emit('prender');
   });
 
-  clients.control.on('apagar', function () {
-    clients.arduino.emit('apagar');
-  })
+  control.on('apagar', function () {
+    arduino.emit('apagar');
+  });
+
+  control.on('girar', function () {
+    arduino.emit('girar');
+    console.log('girar emit');
+  });
+
+  control.on('slide', function (value) {
+    arduino.emit('slide', value);
+  });
 
 });

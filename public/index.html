@@ -10,32 +10,45 @@
   <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
   <script src="/socket.io/socket.io.js"></script>
   <meta charset="utf-8">
-  <title>WebArm</title>
+  <title>GMax</title>
 </head>
 
 <body>
-  
   <script src="js/master.js"></script>
+  <script src='js/client.js'></script>
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
-        <h1>WebArm</h1>
+        <h1>GMax</h1>
       </div>
     </div>
     <div class="nav">
       <ul>
         <li onclick="infoFunction()">Info</li>
-        <li onclick="teamFunction()">Equipo</li>
-        <li onclick="controlFunction()">Control</li>
-        <li onclick="aboutFunction()">About</li>
+        <li onclick="instFunction()">Instrucciones</li>
+        <li onclick="controlFunction()">Controles</li>
+        <li onclick="contactFunction()">Contacto</li>
       </ul>
     </div>
     <div class="containerinfo box">
       <h2 id="title">Info</h2>
       <p id="text">Prototipo de brazo robotico controlado por arduino, leapmotion y aplicaciones web alojadas en Microsoft Azure.</p>
-      <button id="btnOn"> Led On </button>
-      <button id="btnOff"> Led Off </button>
-      <script src='js/client.js'></script>
+      <br />
+      <div id="info" class="centerbox">
+        <img src="/img/msazurelogo.png" alt="Microsoft Azure logo" class="img-responsive">
+        <img src="/img/nodejslogo.png" alt="Node js logo" class="img-responsive">
+        <img src="/img/arduinologo.png" alt="Arduino logo" class="img-responsive">
+        <img src="/img/leapmotionlogo.png" alt="Leap Motion logo" class="img-responsive">
+      </div>
+      <div id="controls" style="display: none">
+        <div class="btn-group btn-group-lg">
+          <button type="button" class="btn btn-primary btn-lg" id="btnOn"> Led On </button>
+          <button type="button" class="btn btn-primary btn-lg" id="btnOff"> Led Off </button>
+          <button type="button" class="btn btn-primary btn-lg" id="btnGirar"> Girar </button>
+        </div>
+        <h3>Servo:</h3>
+        <input id="slide" type="range" min="0" max="180" step="1" value="0">
+      </div>
     </div>
   </div>
 </body>

@@ -6,6 +6,10 @@ body {
     padding: 0px;
 }
 
+.row {
+    margin: 0;
+}
+
 h1 {
     color: rgb(255, 255, 255);
     font-family: "Fjalla One", sans-serif;
@@ -41,7 +45,7 @@ h1 {
 
 .containerinfo {
     width: 80%;
-    height: 500px;
+    min-height: 500px;
     box-shadow: rgba(0, 0, 0, 0.34902) 0px 27px 55px 0px;
     overflow: hidden;
     background: rgb(255, 255, 255);
@@ -61,6 +65,33 @@ h1 {
     font-size: 2em;
     color: rgb(60, 105, 151);
     margin: 0px;
+}
+
+.centerbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.centerbox img {
+    float: left;
+    margin: 5px;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    background-color: silver;
+    width: 500px;
+    height:8px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+     -webkit-appearance: none;
+    background-color: rgb(5, 102, 141);
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
 }
 
 @media(max-width: 700px) {
